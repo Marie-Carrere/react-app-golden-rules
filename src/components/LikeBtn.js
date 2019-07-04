@@ -1,26 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class LikeBtn extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            value: this.props.value
-        }
-    }
+// TODO: passer le dislike et like depuis reducer
 
-    like = () => {
-        this.setState({
-            value: this.state.value + 1
-        })
-    }
+class LikeBtn extends Component {
     
     render() {
-        const { isDown } = this.props
-        const { value } = this.state
+        const { isDown, value, onClick } = this.props
         
         return(
-            <a className="btn btn-default" title="+1" onClick={this.like}>
+            <a className="btn btn-default" title="+1" onClick={onClick}>
                 {value}<i className={`glyphicon glyphicon-thumbs-${isDown ? 'down' : 'up'}`}></i>
             </a>
         )

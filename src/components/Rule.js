@@ -18,7 +18,7 @@ class Rule extends Component {
     
 
     render() {
-        const { rule } = this.props;
+        const { rule, likes, dislikes } = this.props;
         const { folded } = this.state;
         
         return(
@@ -40,8 +40,8 @@ class Rule extends Component {
                             </a>
                         </div>
                         <div className="btn-group btn-group-xs pull-right">
-                            <LikeBtn value={rule.likes} />
-                            <LikeBtn value={rule.likes} isDown/>
+                            <LikeBtn value={rule.likes} onClick={likes} />
+                            <LikeBtn value={rule.dislikes} onClick={dislikes} isDown/>
                         </div>
                     </div>
                 </div>

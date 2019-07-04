@@ -1,11 +1,13 @@
 import React from 'react';
-import RuleList from './components/RuleList'
+import RuleList from './components/RuleListContainer'
+import { Provider } from 'react-redux'
+import store from './store/app-store'
 
 function App() {
   return (
-    <div>
+    <Provider store={store}>
       <RuleList />
-    </div>
+    </Provider>
   );
 }
 

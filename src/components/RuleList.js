@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Rule from './Rule'
-import rules from '../data'
+import Rule from './RuleContainer'
+
 
 class RuleList extends Component {
+    componentDidMount() {
+        this.props.loadRules()
+    }
+
     render() {
-        return rules.map(item => <Rule key={item.id} rule={item} />)
+        return this.props.rules.map(item => <Rule key={item.id} rule={item} />)
     }
 }
-
-
 
 export default RuleList;
