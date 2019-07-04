@@ -20,7 +20,6 @@ class Rule extends Component {
     render() {
         const { rule } = this.props;
         const { folded } = this.state;
-        console.log(rule)
         
         return(
             <div className="panel panel-primary">
