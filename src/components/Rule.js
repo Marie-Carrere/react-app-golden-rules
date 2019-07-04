@@ -20,6 +20,7 @@ class Rule extends Component {
     render() {
         const { rule } = this.props;
         const { folded } = this.state;
+        console.log(rule)
         
         return(
             <div className="panel panel-primary">
@@ -53,7 +54,14 @@ class Rule extends Component {
 }
 
 Rule.propTypes = {
-    rule: PropTypes.object,
+    rule: PropTypes.shape({
+        id: PropTypes.number,
+        title: PropTypes.string,
+        description: PropTypes.string,
+        tags: PropTypes.arrayOf(PropTypes.string),
+        likes: PropTypes.number,
+        dislikes: PropTypes.number
+    }).isRequired
 }
 
 export default Rule
