@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import LikeBtn from './LikeBtn'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import LikeBtn from './LikeBtn'
 
 class Rule extends Component {
     constructor(props) {
@@ -35,9 +36,9 @@ class Rule extends Component {
                         {rule.tags.map(tag => <span className="badge" key={`tag-${rule.id}-${tag}`}>{tag}</span>)}
     
                         <div className="btn-group btn-group-xs pull-right">
-                            <a className="btn btn-primary" title="Update">
+                            <Link to={`/edit/${rule.id}`} className="btn btn-primary" title="Update">
                                 <i className="glyphicon glyphicon-pencil"></i>
-                            </a>
+                            </Link>
                         </div>
                         <div className="btn-group btn-group-xs pull-right">
                             <LikeBtn value={rule.likes} onClick={likes} />

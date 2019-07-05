@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import RuleListContainer from './components/RuleListContainer'
-import RuleForm from './components/RuleForm'
+import RuleFormContainer from './components/RuleFormContainer'
 import store from './store/app-store'
 import Header from './components/Header'
 
@@ -13,8 +13,8 @@ function App() {
       <Router>
         <Header />
         <Route exact path="/" component={RuleListContainer} />
-        <Route path="/new" component={RuleForm} />
-        <Route path="/edit" component={RuleForm} />
+        <Route path="/new" component={RuleFormContainer} />
+        <Route path="/edit/:id" component={RuleFormContainer} />
       </Router>
     </Provider>
   );
