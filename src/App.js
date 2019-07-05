@@ -14,6 +14,7 @@ function App() {
         <Header />
         <Route exact path="/" component={RuleListContainer} />
         <Route path="/new" component={RuleForm} />
+        <Route path="/edit" component={RuleForm} />
       </Router>
     </Provider>
   );

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import '../Header.css'
 
 const Header = (props) => (
     <nav className="navbar navbar-default" role="navigation">
@@ -10,13 +11,17 @@ const Header = (props) => (
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
             </button>
-            <a class="navbar-brand brand">Developers rules</a>
+            <Link to="/" className="navbar-brand brand">Developers rules</Link>
         </div>
 
         <div className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-                <li className="active"><Link to="/">Home</Link></li>
-                <li><Link to="new">New</Link></li>
+                <li>
+                    <NavLink exact to="/" activeClassName="active">Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/new" activeClassName="active">New</NavLink>
+                </li>
             </ul>
         </div>
     </nav>
