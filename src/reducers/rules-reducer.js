@@ -1,4 +1,4 @@
-import { loadRulesTypes } from '../actions/rules-actions'
+import { RULES_LOADED } from '../actions/rules-actions'
 import { LIKE_ACTION, DISLIKE_ACTION } from '../actions/likes-actions';
 
 const like = (state, id) =>
@@ -27,7 +27,7 @@ const disLike = (state, id) =>
 
 const rulesReducer = (state = [], action) => {
     switch (action.type) {
-        case loadRulesTypes:
+        case RULES_LOADED:
             return action.payload
         case LIKE_ACTION:
             return like(state, action.payload)
