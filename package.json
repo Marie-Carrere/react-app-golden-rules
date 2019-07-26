@@ -13,7 +13,7 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "superagent": "^5.1.0",
-    "snyk": "^1.192.4"
+    "snyk": "^1.192.6"
   },
   "scripts": {
     "start": "react-scripts start",
