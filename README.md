@@ -1,5 +1,8 @@
 <h1 align="center">Golden Rules React App</h1>
 
+![banner (5)](https://user-images.githubusercontent.com/30493337/61953107-d6407280-afb5-11e9-9ff4-28d871ff5b73.png)
+
+
 The aim is to design an application which lists "golden rules" for developers. These rules are the best practices that every developer should follow!
 
 ## Built With
