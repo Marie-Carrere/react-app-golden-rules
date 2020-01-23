@@ -12,8 +12,8 @@ The aim is to design an application which lists "golden rules" for developers. T
 ## Installation
 
 ```
-$ git clone https://github.com/Marie-Carrere/react-hooks-crud.git
-$ cd react-hooks-crud
+$ git clone https://github.com/Marie-Carrere/react-app-golden-rules.git
+$ cd react-app-golden-rules
 $ npm install
 $ npm start
 ```
